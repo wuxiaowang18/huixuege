@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="搜索一下" />
+  <meta name="copyright" content="搜索一下" />
+  <base target="_blank" />
+
+  <title>搜索一下</title>
+             <link type="text/css" href="wp-content/themes/begin/static/style_3.css" rel="stylesheet">
+         <link type="text/css" href="wp-content/themes/begin/static/main.css" rel="stylesheet" id="cl">
+       <script type="text/javascript" language="javascript">function $(id){return document.getElementById(id)}function setCookie(v,e){var t=new Date();t.setTime(t.getTime());var e_date=new Date(t.getTime()+365*1000*60*60*24);document.cookie="cl"+'='+encodeURIComponent(v)+';expires='+e_date.toGMTString()+';path=/'}function getCookie(n){var c=document.cookie.split("; ");for(var i=0;i<=c.length;i++){var p=c[i].split("=");if(n==p[0])try{return decodeURIComponent(p[1])}catch(e){return null}}return null}function set_cl(c){setCookie(c);$("cl").href="c"+c+".css"}(function(){var c=getCookie("cl");if(c&&c!=0)set_cl(c)})();</script>
+ <script>window.Birdie=true</script>
+  </head>
+ <body onload="javascript:document.getElementById('keyword').focus();">
+  <div class="bbla-top">
+   <div id="search">
+    <div id="sbimg">
+     <img id="sblogo">
+    </div>
+    <div id="sbmain" class="aoyuns">
+     <div id="sbmclass">
+      <ul>
+	   <li><span><a id="sc0" onclick="set_so(0)" class="cur">学术</a></span></li>
+       <li><span><a id="sc1" onclick="set_so(1)">网页</a></span></li>
+       <li><span><a id="sc2" onclick="set_so(2)">图片</a></span></li>
+       <li><span><a id="sc3" onclick="set_so(3)">视频</a></span></li>
+       <li><span><a id="sc4" onclick="set_so(4)">音乐</a></span></li>
+       <li><span><a id="sc5" onclick="set_so(5)">地图</a></span></li>
+       <li><span><a id="sc6" onclick="set_so(6)">购物</a></span></li>
+       <li><span><a id="sc7" onclick="set_so(7)">贴吧</a></span></li>
+       <i class="kill"></i>
+      </ul>
+     </div>
+     <form onsubmit="return do_so(this)">
+      <div id="sbse">
+        <span class="sbsetext"><input id="keyword" type="text" class="se_text" name="word" baidusug="2" value="SCI-HUB 请使用DOI号搜索，如10.1114/lan&wang.520" onclick="javascript:this.value=&#39;&#39;"></span>
+       <span class="sbsesb"><input id="s-btn" type="submit" class="se_button" value="Google搜索"></span>
+      </div>
+      <div id="sbmkeys" onclick="change_sp()">
+    
+       <label for="sp10"><input id="sp10" type="radio" name="sp" checked="checked">百度学术</label>
+       <label for="sp20"><input id="sp20" type="radio" name="sp">SCI-HUB</label>
+       <label for="sp30"><input id="sp30" type="radio" name="sp">学术在线</label>
+       <label for="sp40"><input id="sp40" type="radio" name="sp">图书馆</label>
+	    <label for="sp50"><input id="sp50" type="radio" name="sp">知网</label>
+       <label for="sp60"><input id="sp60" type="radio" name="sp">万方</label>
+      </div>
+     </form>
+    </div>
+    <div id="real-box" style="display:none"></div>
+    <img id="go" style="display: none">
+   </div>
+   <!--search end-->
+   <div id="shine">
+    <ul id="inshine">
+	  <li><a href="page-4.html" target="_blank"> 切换至：快搜导航！</a></li>
+    </ul>
+   </div>
+  </div>
+  <script type="text/javascript" src="wp-content/themes/begin/static/jquery_3.js"></script>
+  <script type="text/javascript" language="javascript">function killErrors(){return true}window.onerror=killErrors;var $j=jQuery.noConflict();$j(function($){$body=(window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');$("#totop").hide();$('#tomore').click(function(){$body.animate({scrollTop:$('#pocket').offset().top},550);$(this).hide().siblings().show();return false});$('#totop').click(function(){$body.animate({scrollTop:$('#bannner').offset().top},550);$(this).hide().siblings().show();return false})});var cur_sc=0;var sitePath="/";
+
+var sc_sel=[0,0,0,0,0,0,0,0];
+var sc_logo=[["ggxs","Scihub","xszx","tsg","zgzw","wf"],["bd","wj","by","sg","Peek","mezw","Yandex"],["bd","px","pe","sy","hb","zk"],["db","hz","mhh","clm","yk","td","iqy"],["qq","qqy","wyy","yys","wsyy","yyt","kg"],["bd","gg","sg"],["tb","jd","dd","ymx"],["bd","db","ty"],["wb","zr"]];
+
+var sc_sb=[["Google","Sci-hub","学术在线","图书馆","知网","万方"],["百度","维基","必应","搜狗","Yandex","Peekier","MEZW"],["百度","Pixabay","Pexels","Stocksy","花瓣","站酷"],["百度","5号站","猫哈哈","磁力猫","优酷","土豆","爱奇艺"],["千千","QQ","网易云","音乐搜","无损音乐","音悦台","酷狗"],["百度","谷歌","搜狗"],["淘宝","京东","当当","亚马逊"],["贴吧","豆瓣","天涯"]];
+
+var sc_url=[["百度学术","xueshu.baidu.com/s?wd={$query}","Sci-hub","sci-hub.tw/{$query}","学术在线","spis.hnlat.com/scholar/list?val={$query}&batchId=b3a10a89-bcce-4ac0-a29f-a236d67590c2&queryType=0&field=keyword&value=&start_y=&end_y=&journal=&sites%5B0%5D=&fileType=20","图书馆","jour.ucdrs.superlib.net/searchJour?sw={$query}&allsw=&bCon=&ecode=utf-8&channel=searchJour&Field=all","知网","kns.cnki.net/kns/brief/Default_Result.aspx?code=SCDB&kw={$query}","万方","s.g.wanfangdata.com.cn/Paper.aspx?q={$query}&Refer=weibo_user"],
+
+["百度","www.baidu.com/s?ie=utf-8&wd={$query}","维基","zh.wikipedia.org/wiki/{$query}","必应","cn.bing.com/search?q={$query}","搜狗","www.sogou.com/sogou?query={$query}&pid=sogou-site-42a6845a557bef70","Yandex","yandex.com/search/?text={$query}&lr=21322","Peekier","peekier.com/#!{$query}","MEZW","so.mezw.com/Search?wd={$query}"],
+
+["百度","image.baidu.com/i?ct=201326592&cl=2&lm=-1&tn=baiduimage&pv=&z=0&word={$query}&ie=utf-8","Pxiabay","pixabay.com/images/search/{$query}/","Pexels","www.pexels.com/search/{$query}/","Stocksy","www.stocksy.com/search/?text={$query}&sort=curated&page=1","花瓣","huaban.com/search/?q={$query}","站酷","www.zcool.com.cn/tosearch.do?page=0&world={$query}"],
+
+["百度","video.baidu.com/v?word={$query}&pn=0&rn=20&tn=&ct=301989888&ie=utf-8","5号站","www.wuhaozhan.net/s/{$query}/","猫哈哈","www.maohaha.com/search/{$query}.html","磁力猫","www.cilimao.cc/search?sortProperties=created_time&resourceType=1&resourceSource=0&word={$query}&page=1","优酷","www.soku.com/search_video/q_{$query}","土豆","so.tudou.com/nisearch/{$query}/","爱奇艺","so.iqiyi.com/so/q_{$query}"],
+
+["千千","music.baidu.com/search?key={$query}","QQ","y.qq.com/portal/search.html#page=1&searchid=1&remoteplace=txt.yqq.top&t=song&w={$query}","网易云","music.163.com/#/search/m/?s={$query}&type=1","音乐搜","music.ifkdy.com/?name={$query}&type=qq","无损音乐","www.sq688.com/search.php?key={$query}","音悦台","so.yinyuetai.com/mv?keyword={$query}","酷狗","www.kugou.com/yy/html/search.html#searchType=song&searchKeyWord={$query}"],
+
+["百度","map.baidu.com/m?word={$query}","谷歌","ditu.google.cn/maps?q={$query}&hl=zh-CN","搜狗","map.sogou.com/#lq={$query}"],["淘宝","s.taobao.com/search?commend=all&q={$query}&pid=mm_26141474_0_0&mode=66","京东","search.360buy.com/Search?keyword={$query}","当当","search.dangdang.com/?key={$query}","亚马逊","www.amazon.cn/gp/search?ie=UTF8&camp=536&creative=3200&index=books&keywords={$query}&linkCode=ur2&tag=benbenla-23"],
+
+["百度","tieba.baidu.com/f?kw={$query}&ie=utf-8","豆瓣","www.douban.com/search?q={$query}","天涯","search.tianya.cn/bbs?q={$query}"]];
+
+function set_so(n){var spk="";if(cur_sc==n){return}$("sbmkeys").innerHTML="";s_sd("sbmkeys",0);obj=$("sc"+n);s_n(obj,"cur");s_n("sc"+cur_sc,"");cur_sc=n;so_img(n);if(sc_url[n].length>3){s_sd("sbmkeys",1);for(i=0;i<sc_url[n].length/2;i++){spk+="<label for=sp"+i+n+"><input id=sp"+i+n+" type=radio"+(sc_sel[n]==i?" checked":"")+" name=sp>"+sc_url[n][i*2]+"</label>"}$("sbmkeys").innerHTML=spk}$("keyword").focus()}function so_img(n){$("sblogo").src="images/"+sc_logo[n][sc_sel[cur_sc]]+n+".gif";$("s-btn").value=sc_sb[n][sc_sel[cur_sc]]+"搜索"}function do_so(o){var k=$("keyword").value;var s=sc_sel[cur_sc];if(s==1&&cur_sc==1||cur_sc==7)q=k;else q=euc(k);var t=sc_url[cur_sc][s*2+1];window.open("http://"+t.replace("{$query}",q),"");go(2,["kw",k,"t",cur_sc]);return false}function change_sp(){var es=els("sbmkeys","input");for(var i=0;i<es.length;i++){if(es[i].checked){sc_sel[cur_sc]=i;so_img(cur_sc)}}$("keyword").focus()}function do_so_bd(v){var f=document.so_bd;f.wd.value=v;f.submit()}function euc(s){return encodeURIComponent(s)};function go(a,s){var b=["act="+a];for(var i=0;i<s.length;i+=2)b.push(s[i]+"="+(s[i+1]));$('go').src=sitePath+"goUrlCount.do?"+b.join("&")}function s_sd(i,d){if(typeof(i)=="string"){i=$(i)}if(d=="1"){d="block"}else if(d=="2"){d=""}else d="none";i.style.display=d}function s_n(a,b){if(typeof(a)=="string")a=$(a);a.className=b}function s_nc(a,b){if(typeof(a)=="string"){a=$(a)}if(a.className==b){return true}else return false}function els(i,t){if(typeof(i)=="string"){i=$(i)}return i.getElementsByTagName(t)};var params={"XOffset":2,"YOffset":-3,"width":430,"fontColor":"#0a0a0a","fontColorHI":"#FFF","fontSize":"14px","fontFamily":"宋体","borderColor":"gray","bgcolorHI":"#1C66C1","sugSubmit":false};BaiduSuggestion.bind("keyword",params);</script>
+ 
+<script>
+function stop(){
+return false;
+}
+document.oncontextmenu=stop;
+</script>
+
+<SCRIPT language=JavaScript>
+
+document.oncontextmenu=new Function("event.returnValue=false;");
+
+document.onselectstart=new Function("event.returnValue=false;");
+
+</SCRIPT>
+</body></html>
