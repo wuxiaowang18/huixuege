@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>时光沙漏❤️Miss兰</title>
+<link rel="shortcut icon" href="wp-content/themes/begin/static/ai.ico" />
+<meta name="keywords" content="绘雪阁" />
+<meta name="description" content="绘雪阁：www.xuegebk.cn" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link rel="stylesheet" href="wp-content/themes/begin/static29/css/style.css" type="text/css" media="all">
+  <script type="text/javascript" src="wp-content/themes/begin/static29/js/jquery.min.js" ></script>
+  <script type="text/javascript" src="wp-content/themes/begin/static29/js/functions.js"></script>
+<link type="text/css" href="wp-content/themes/begin/static29/css/css.css" rel="stylesheet" />
+<link type="text/css" href="wp-content/themes/begin/static29/css/music_disc.css" rel="stylesheet" />
+  <script type="text/javascript" src="wp-content/themes/begin/static29/js/musicPlayer.js" ></script>
+
+    <script>
+        function checkhtml5()
+        {
+            if ($.browser.msie  && parseInt($.browser.version, 10) < 9) {
+                document.body.innerHTML="<div style=' clear: both; text-align:center; position: relative; height: 50px; margin-top: 30px; padding: 20px; background-color: red; color: white; font-size:20px;'>你的浏览器非常落后，不支持 HTML5!<br/>请使用 Chrome 14+/IE 9+/Firefox 7+/Safari 4+ 其中任意一款浏览器访问此页面。</a></div>";
+
+            }
+        }
+    </script>
+<style type="text/css">  
+		.snow-container{position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100001; }
+	</style>   
+<script type="text/javascript" src="wp-content/themes/begin/static29/js/jquery.js"></script>
+<script type="text/javascript" src="wp-content/themes/begin/static29/js/snow.js"></script>
+</head>
+
+<body >
+<div id="songstatus">
+	    <div id="songstatus_pic" onclick="control(songNum)">
+	        <img src="wp-content/themes/begin/static29/img/music_disc.png" id="status_pic"><!--黑胶唱片-->
+	        <img src="wp-content/themes/begin/static29/img/discpointer.png" id="discpointer_pic"><!--指针-->
+	    </div>
+		<div id="songslist">
+			
+			</li>
+			<li id="songName1" style="margin-top: 50px;">
+				<span onclick="start(1)">小酒窝</span>
+				<audio src="wp-content/themes/begin/static29/music/xiao.mp3" preload loop id="music1" class="music"></audio>
+			</li>
+			<li id="songName2">
+				<span onclick="start(2)">Marry Me</span>
+				<audio src="wp-content/themes/begin/static29/music/Marry Me.mp3" preload loop id="music2" class="music"></audio>
+			</li>
+                                              <li id="songName3">
+				<span onclick="start(3)">❤️新婚快乐</span>
+				<audio src="wp-content/themes/begin/static29/music/Marry Me.mp3" preload loop id="music3" class="music"></audio>
+
+			<div id="playStatus">
+				<img src="wp-content/themes/begin/static29/img/songCover0.png" id="songCover">
+			</div>
+			<li id="songName4">
+				<span onclick="start(3)">2023年1月25日</span>
+			</li>
+						
+			<div id="playStatus">
+				<img src="wp-content/themes/begin/static29/img/songCover0.png" id="songCover">
+			</div>
+		</div>
+	</div>
+<div class="snow-container"></div>
+<div class="page_spinner">
+</div>
+<div class="over">
+	<div class="centre">
+		<div class="main">
+			<!--header -->
+			<header>	
+				<nav class="page_Time">
+					<ul id="page_Time">
+						<li id="page_Time">
+						<img src="wp-content/themes/begin/static29/images/bg_content.png" alt="" class="bg_cont">
+						<span class="back"><img src="./" alt="" usemap="#back"><a href="#close"></a></span>
+<div class="pad">
+							<h2>时光沙漏</h2>
+                            <div id="loveHeart" style="margin-top: 25px;font-size: 22px; ">
+                                        <div id="elapseClock" style="margin: 20px 0px 20px 0px;" ></div>
+<div class="pad2">
+<div class="box">
+	<ul class="minbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ol class="maxbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</div></div>
+<div class="pad3">
+
+                                <img src="wp-content/themes/begin/static29/images/1.gif" />　　　           　<img src="wp-content/themes/begin/static29/images/1.gif" />
+                                        <div class="signature" style="float: right;">By @爱你的吴先生</div>
+
+  </div>
+</div>
+
+<script>
+$(window).load(function() {	
+	$('.page_spinner').fadeOut();
+	$('body').css({overflow:'visible'});
+	
+})
+</script>
+<script>
+    $(window).load(function (){
+        var biz_name = '';
+        var biz_url = '';
+        $("a[rel^='prettyPhoto']").prettyPhoto({social_tools:'<a href="' + biz_url + '" target="_blank">' + biz_name + '</a>',animation_speed:'normal',theme:'dark_square',slideshow:5000, autoplay_slideshow: false});
+    });
+</script>
+
+<script type="text/javascript">
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = new Date();
+    together.setFullYear(2020, 4, 20);
+    together.setHours(0);
+    together.setMinutes(0);
+    together.setSeconds(0);
+    together.setMilliseconds(0);
+
+        setTimeout(function () {
+            adjustWordsPosition();
+            startHeartAnimation();
+        }, 3000);
+
+        timeElapse(together);
+        setInterval(function () {
+            timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+</script>
+<!--coded by koma-->
+
+<!--LIVEDEMO_00 -->
+</div>
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" >
+    var jiathis_config={
+        data_track_clickback:true,
+        summary:"",
+        appkey:{
+            "tsina":"1923943721",
+            "tqq":"1923943721",
+            "qzone":"1923943721",
+        },
+        showClose:true,
+        shortUrl:false,
+        hideMore:false
+    }
+</script>
+<SCRIPT language=JavaScript>
+
+document.oncontextmenu=new Function("event.returnValue=false;");
+
+document.onselectstart=new Function("event.returnValue=false;");
+
+</SCRIPT>
+</body>
+</html>
+						
+						
